@@ -1,0 +1,204 @@
+@import 'responsive.sсss';
+
+.info {
+  margin-top: -440px; 
+  margin-bottom: 120px;
+  @include media(mdx) {
+    margin-top: -80px;
+  }
+  &__holder {
+    position: relative;
+  }
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    top: -382px;
+    right: -50px;
+    width: 50%; 
+    @include media(lgb) {
+      right: 0; 
+    }
+    @include media(lgk) {
+      top: -322px;
+    }
+    @include media(mdx) {
+      display: none;  
+    }
+    svg {
+      display: block; 
+      max-width: 100%;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    &:nth-child(even) {
+      .info__box:last-child {
+        order: -1;
+        @include media(mdx) {
+          order: 1;
+        }
+      }
+    }
+    &:first-child {
+      .info__box {
+        &:last-child {
+          background-color: transparent;
+        }
+        &:first-child {
+          img {
+            border-bottom: 20px solid #003A7A;
+          }
+        }
+      }
+    }
+    &:last-child {
+      .info__box {
+        &:first-child {
+          background-color: transparent;
+        }
+      }
+    }
+    &:nth-child(4n+1) {
+      .info__box:first-child {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          bottom: -270px;
+          left: -260px; 
+          width: calc(100% + 260px);
+          height: 717px; 
+          background-image: url(../img/info-1.svg);
+          background-repeat: no-repeat;
+          @include media(lgb) {
+            width: 100%;  
+            left: 0;
+          }
+          @include media(lgs) {
+            background-position: center;
+          }
+          @include media(mdx) {
+            display: none;  
+          }
+        }
+      }
+    }
+    &:nth-child(4n+3) {
+      .info__box:last-child {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          z-index: 2;
+          top: -550px;
+          right: -75px; 
+          width: calc(100% + 55px);
+          height: 954px; 
+          background-image: url(../img/info-2.svg);
+          background-repeat: no-repeat;
+          background-position: right center;
+          @include media(lgb) {
+            width: 100%;  
+            right: 0;
+          }
+          @include media(mdx) {
+            display: none;  
+          }
+        }
+      }
+    }
+    &:nth-child(4n+4) {
+      .info__box:last-child {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: '';
+          z-index: 2;
+          top: -540px;
+          left: -125px; 
+          width: 732px;
+          height: 777px; 
+          background-image: url(../img/info-3.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+          @include media(lgb) {
+            width: 100%;  
+            left: 0;
+          }
+          @include media(lg) {
+            background-position: right center;
+          }
+          @include media(mdx) {
+            display: none;  
+          }
+        }
+      }
+    }
+  }
+  &__box {
+    width: 50%;
+    background-color: #F8FAFB;
+    @include media(mdx) {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    &:first-child {
+      padding-bottom: 318px;
+      @include media(mdx) {
+        padding-bottom: 0;
+      }
+    }
+    &:last-child {
+      padding-top: 318px;
+      @include media(mdx) {
+        padding-top: 0;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      @include media(mdx) {
+        margin: 0 auto;
+      }
+    }
+  }
+  &__content {
+    background-color: #D5E4EB;
+    padding: 40px;
+    @include media(sm) {
+      padding: 30px 20px;
+    }
+  }
+  &__text {
+    padding-bottom: 50px;
+    p {
+      font-size: 18px;
+      line-height: 2;
+      color: #333;
+      text-align: justify;
+      @include media(sm) {
+        font-size: 16px;  
+      }
+      &:not(:last-child) {
+        padding-bottom: 2em;
+      }
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: 64px;
+    color: #003A7A;
+    padding-bottom: 12px;
+    font-weight: 900;
+    @include media(mdx) {
+      font-size: 42px;  
+    }
+     @include media(sm) {
+      font-size: 28px;  
+    }
+
+  }
+}

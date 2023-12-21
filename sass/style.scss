@@ -1,0 +1,139 @@
+@import 'responsive.sсss';
+
+* {
+  box-sizing: border-box;
+}
+
+*:after, *:before {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  &--services {
+    max-width: 1360px;
+  }
+  &--about {
+    max-width: 960px;
+  }
+  &--contact {
+    max-width: 1110px;
+  }
+  &--header {
+    max-width: 1320px;
+  }
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #3D4048;
+  margin: 0;
+  padding: 0px;
+  font-family: SFPro, sans-serif;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  max-width: 214px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #FFF;
+  text-align: center;
+  background-color: #003A7A;
+  border: none;
+  outline: none;
+  padding: 15px 10px;
+  margin: 0 auto;
+  transition: 0.25s background-color;
+  font-family: SFPro, sans-serif;
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+  &:hover:not(:disabled) {
+    background-color: #002f61;
+  }
+}
+
+.error {
+  font-size: 16px;
+  color: #9c0000;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+
+.title {
+  position: relative;
+  font-size: 64px;
+  color: #003A7A;
+  text-align: center;
+  margin-bottom: 70px;
+  font-weight: 900;
+  @include media(mdx) {
+    font-size: 42px;  
+    margin-bottom: 60px;
+  }
+  @include media(sm) {
+    font-size: 28px;  
+    margin-bottom: 40px;
+  }
+  &.right-dark {
+    &:after {
+      position: absolute;
+      top: 50%;
+      content: '';
+      width: 20px;
+      height: 20px;
+      transform: scale(-1, 1) translateY(-50%);
+      margin-left: 24px;
+      background-image: url(../img/icons/arrow-dark.svg);
+    }
+  }
+  &.left-dark {
+    &:before {
+      position: absolute;
+      top: 50%;
+      content: '';
+      width: 20px;
+      height: 20px;
+      transform: translateY(-50%);
+      margin-left: -48px;
+      background-image: url(../img/icons/arrow-dark.svg);
+    }
+  }
+}
+
+.input {
+  display: block;
+  width: calc(100% - 20px);
+  border: none;
+  font-size: 16px;
+  color: #000;
+  padding-left: 14px;
+  font-weight: 400;
+  font-family: SFPro, sans-serif;
+  &--area {
+    min-height: 200px;
+    resize: none;
+  }
+}
+
+
+
+@import 'reset';
+@import 'header';
+@import 'preview';
+@import 'about';
+@import 'services';
+@import 'contacts';
+@import 'info';
+@import 'footer';

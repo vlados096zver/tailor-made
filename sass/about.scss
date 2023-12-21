@@ -1,0 +1,63 @@
+@import 'responsive.sсss';
+
+.about {
+	position: relative;
+	z-index: 2;
+	margin-top: -320px;
+	margin-bottom: 80px;
+	@include media(mdx) {
+		margin-top: -200px;
+	}
+	@include media(smdx) {
+		margin-top: -186px;
+	}
+	&__wrap {
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			top: -20px;
+			right: -244px;
+			width: 150px;
+			height: 150px;
+			border: 1px solid rgba(0, 58, 122, 0.3);	
+			border-radius: 50%;	
+			@include media(lg) {
+				right: -150px;
+			}
+			@include media(lgk) {
+				right: 0;
+			}
+			@include media(mdx) {
+				display: none;
+			}
+		}
+	}
+	&__text {
+		p {
+			font-size: 18px;
+			line-height: 2;
+			color: #333;
+			text-align: justify;
+			@include media(sm) {
+				font-size: 16px;
+			}
+		}
+	}
+	&__decor {
+		position: absolute;
+		right: -168px;
+		bottom: -82px;
+		max-width: 84px;
+		@include media(lgs) {
+			right: -140px;
+		}
+		@include media(lgk) {
+			display: none;
+		}
+		svg {
+			display: block;
+			max-width: 100%;
+		}
+	}
+}

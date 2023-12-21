@@ -1,0 +1,76 @@
+@import 'responsive.sсss';
+
+.services {
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -20px;
+		@include media(mdx) {
+		 	margin: 0;
+		}
+	}
+	&__item {
+		width: calc(100% / 4 - 40px);
+		position: relative;
+		border-radius: 15px;
+		background-color: #D5E4EB;
+		padding: 40px 24px;
+		margin: 0 20px;
+		margin-bottom: 80px;
+		@include media(mdx) {
+	        width: calc(100% / 2 - 40px);
+	    }
+	    @include media(mdx) {
+	        width: 100%;
+	        max-width: 450px;
+	        margin: 0 auto;
+	        margin-bottom: 80px;
+	    }
+		&:after,
+		&:before {
+			position: absolute;
+			content: '';
+			left: 10px;
+			width: calc(100% - 20px);
+			height: 20px;
+			background: #C5D1D6;
+		}
+		&:after {
+			top: -20px;
+			border-radius: 15px 15px 0 0;
+		}
+		&:before {
+			bottom: -20px;
+			border-radius: 0 0 15px 15px;
+		}
+	}
+	&__image {
+		width: 128px;
+		height: 128px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		border-radius: 50%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	&__title {
+		font-size: 20px;
+		color: #003A7A;
+		text-align: center;
+		padding-bottom: 30px;
+		font-weight: 900;
+	}
+	&__text {
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+			color: #333;
+			text-align: center;
+			@include media(mdx) {
+				line-height: 1.8;
+			}
+		}
+	}
+}

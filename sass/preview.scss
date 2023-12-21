@@ -1,0 +1,159 @@
+@import 'responsive.sсss';
+
+.preview {
+	position: relative;
+	background-image: url(../img/bg-preview.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding-bottom: 424px;
+	max-width: 1920px;
+    margin: 0 auto;
+    @include media(smdx) {
+    	background-size: cover;
+    	padding-bottom: 324px;
+    }
+    &:before {
+    	position: absolute;
+    	content: '';
+    	z-index: -1;
+    	right: 0;
+    	top: 0;
+    	width: 100%;
+    	height: 1408px;
+    	background-image: url(../img/bg-decor.png);
+    	background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include media(lgk) {
+			height: 94%;
+		}
+		@include media(mdx) {
+			display: none;
+		}
+    }
+    &__holder {
+    	position: relative;
+    	max-width: 1260px;
+    	margin: 0 auto;
+    }
+    &__decor-1,
+    &__decor-2 {
+    	position: absolute;
+    	content: '';
+    	@include media(md) {
+    		display: none;
+    	}
+    }
+    &__decor-1 {
+    	bottom: 140px;
+    	left: 0;
+    	@media screen and (max-height: 990px) {
+    		bottom: 60px;
+    	}
+    }
+    &__decor-2 {
+    	top: 150px;
+    	right: -150px;
+    	@include media(lgb) {
+    		right: 0;
+    	}
+    	@include media(lgxs) {
+    		top: 264px;
+    	}
+    }
+	&__title {
+		position: relative;
+		font-size: 96px;
+		color: #FFF;
+		text-align: center;
+		margin-bottom: 75px;
+		font-weight: 900;
+		@include media(lgk) {
+			font-size: 83px;
+		}
+		@include media(lgxs) {
+			font-size: 76px;
+		}
+		@include media(mdx) {
+			font-size: 70px;
+		}
+		@include media(mdx) {
+			font-size: 62px;
+		}
+		@include media(smdx) {
+			font-size: 56px;
+		}
+		@include media(sm) {
+			margin-bottom: 45px;
+		}
+		@include media(smdx) {
+			font-size: 37px;
+		}
+		&:after,
+		&:before {
+		   position: absolute;
+		   content: '';
+		   background-image: url(../img/icons/arrow-light.svg);
+		   width: 20px;
+	       height: 20px;
+			@include media(xs) {
+				display: none;	
+			}
+		}
+	    &:after {
+	      top: 0;
+	      transform: scale(-1, 1);
+	      margin-left: 24px;
+	    }
+	    &:before {
+	      top: calc(100% - 20px);
+	      width: 20px;
+	      height: 20px;
+	      margin-left: -48px;
+	    }
+	}
+	&__text {
+		font-size: 36px;
+		line-height: 1.5;
+		text-align: center;
+		color: #FFF;
+		padding-bottom: 70px;
+		@include media(smdx) {
+			font-size: 28px;
+			padding-bottom: 50px;
+		}
+		@include media(xs) {
+			font-size: 20px;
+			padding-bottom: 50px;
+		}
+	}
+	&__elem {
+		font-size: 64px;
+		color: #D5E4EB;
+		text-align: center;
+		margin-bottom: 190px;
+		font-weight: 900;
+		@media screen and (max-height: 990px) {
+			margin-bottom: 100px;
+		}
+		@include media(smdx) {
+			margin-bottom: 100px;
+		}
+		@include media(sm) {
+			font-size: 35px;
+			margin-bottom: 80px;
+		}
+	}
+	&__btn {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 120px;
+		border-radius: 30px;
+		background-color: #FFF;
+		border: none;
+		margin: 0 auto;
+	}
+}
